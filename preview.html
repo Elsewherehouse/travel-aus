@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tour Landing Page</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0f172a;
+        color: #fff;
+    }
+
+    header {
+        padding: 80px 20px;
+        text-align: center;
+        background: linear-gradient(135deg, #1e3a8a, #0f172a);
+    }
+
+    header h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        font-size: 18px;
+        opacity: 0.85;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 40px 20px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        background: #111827;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .card h2 {
+        margin-top: 0;
+        color: #60a5fa;
+    }
+
+    ul {
+        padding-left: 18px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input, textarea, button {
+        padding: 12px;
+        border-radius: 8px;
+        border: none;
+        font-size: 14px;
+    }
+
+    input, textarea {
+        background: #1f2937;
+        color: white;
+    }
+
+    button {
+        background: #3b82f6;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.2s;
+    }
+
+    button:hover {
+        background: #2563eb;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        opacity: 0.7;
+        font-size: 13px;
+    }
+
+    .highlight {
+        color: #fbbf24;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Discover the Ultimate Tour Experience</h1>
+    <p>
+        Join us for an unforgettable journey. Explore iconic destinations, premium experiences,
+        and curated travel moments designed for modern explorers.
+    </p>
+</header>
+
+<div class="container">
+
+    <div class="grid">
+
+        <!-- TOUR INFO -->
+        <div class="card">
+            <h2>Tour Overview</h2>
+            <p>
+                A premium guided tour experience featuring luxury stays, local culture immersion,
+                and exclusive access to hidden gems.
+            </p>
+            <ul>
+                <li>Duration: 7–10 Days</li>
+                <li>Destinations: 5+ curated locations</li>
+                <li>Group Size: Small (max 12)</li>
+                <li>Experience Level: All welcome</li>
+            </ul>
+        </div>
+
+        <!-- ITINERARY -->
+        <div class="card">
+            <h2>What You’ll Experience</h2>
+            <ul>
+                <li>City landmarks & guided exploration</li>
+                <li>Food & cultural experiences</li>
+                <li>Sunset events & social nights</li>
+                <li>Optional adventure add-ons</li>
+            </ul>
+            <p class="highlight">Limited spots available per tour cycle.</p>
+        </div>
+
+        <!-- EOI FORM -->
+        <div class="card">
+            <h2>Expression of Interest</h2>
+            <form onsubmit="submitEOI(event)">
+                <input type="text" placeholder="Full Name" required />
+                <input type="email" placeholder="Email Address" required />
+                <input type="tel" placeholder="Phone (optional)" />
+                <textarea rows="3" placeholder="Anything we should know?"></textarea>
+                <button type="submit">Register Interest</button>
+            </form>
+        </div>
+
+        <!-- MAILING LIST -->
+        <div class="card">
+            <h2>Join Mailing List</h2>
+            <p>Get updates on launch dates, pricing & early-bird offers.</p>
+            <form onsubmit="joinMailing(event)">
+                <input type="email" placeholder="Your Email" required />
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 Tour Experience. All rights reserved.
+</footer>
+
+<script>
+function submitEOI(e){
+    e.preventDefault();
+    alert("Thanks! Your Expression of Interest has been received.");
+}
+
+function joinMailing(e){
+    e.preventDefault();
+    alert("You're subscribed to the mailing list!");
+}
+</script>
+
+</body>
+</html>
